@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>{{ form.instance.pk|yesno:"Edit Movie,Add Movie" }}</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Save</button>
+    </form>
+    <p><a href="{% url 'videos:list' %}">Back to list</a></p>
+  </body>
+</html>

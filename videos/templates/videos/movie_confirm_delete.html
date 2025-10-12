@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Delete “{{ movie.MovieTitle }}”?</h1>
+    <p>This action cannot be undone.</p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit">Yes, delete</button>
+      <a href="{% url 'videos:list' %}">Cancel</a>
+    </form>
+  </body>
+</html>

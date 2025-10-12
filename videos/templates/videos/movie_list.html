@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Movies</h1>
+    <p><a href="{% url 'videos:create' %}">+ Add Movie</a></p>
+    <ul>
+      {% for m in movies %}
+        <li>
+          <strong>{{ m.MovieTitle }}</strong> ({{ m.ReleaseYear }}) — {{ m.MovieGenre }}
+          &nbsp;|&nbsp;<a href="{% url 'videos:update' m.pk %}">Edit</a>
+          &nbsp;|&nbsp;<a href="{% url 'videos:delete' m.pk %}">Delete</a>
+        </li>
+      {% empty %}
+        <li>No movies yet.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
