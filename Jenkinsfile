@@ -114,7 +114,7 @@ EOSH
               --driver=docker \
               --container-runtime=containerd \
               --kubernetes-version=v1.30.0 \
-              --cpus=2 --memory=4096 \
+              --cpus=2 --memory=3000 \
               --network="${MK_DOCKER_NET}" \
               --wait=all \
               --force \
@@ -125,7 +125,7 @@ EOSH
                 --driver=docker \
                 --container-runtime=containerd \
                 --kubernetes-version=v1.30.0 \
-                --cpus=2 --memory=4096 \
+                --cpus=2 --memory=3000 \
                 --network="${MK_DOCKER_NET}" \
                 --wait=all \
                 --force \
